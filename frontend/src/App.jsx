@@ -1,5 +1,3 @@
-// src/App.jsx
-
 import { useState, useEffect } from "react";
 import { userService } from "./services/api";
 import UserForm from "./components/UserForm";
@@ -8,7 +6,6 @@ import { ToastContainer, toast } from "react-toastify";
 import { AnimatePresence } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 
-// Ícones (Heroicons são uma ótima opção com Tailwind)
 const PlusIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
