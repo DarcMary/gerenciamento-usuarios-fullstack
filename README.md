@@ -1,97 +1,139 @@
-# API de Gerenciamento de Usuários
+# Gerenciamento de Usuários - Aplicação Full Stack
 
-Este é o backend do projeto individual do curso de Desenvolvimento Full Stack, que consiste em uma API REST para gerenciar usuários, permitindo seu cadastro, listagem, edição e exclusão. O objetivo é colocar em prática os conhecimentos fundamentais de desenvolvimento web.
+Uma aplicação web completa para gerenciamento de usuários, construída com React no frontend e Node.js no backend.
 
-## ✨ Funcionalidades
+## 🚀 Tecnologias Utilizadas
 
-A API permite realizar as seguintes operações básicas (CRUD) sobre os usuários:
+### Frontend
+- React com Vite
+- TailwindCSS para estilização
+- Axios para requisições HTTP
+- ESLint para padronização de código
 
-  * **Cadastro de Usuário**: Inserir informações como nome, e-mail e senha.
-  * **Visualização**: Listar todos os usuários cadastrados.
-  * **Edição**: Atualizar os dados de um usuário existente.
-  * **Exclusão**: Remover um usuário do sistema.
-
-## 🚀 Tecnologias Utilizadas (Backend)
-
-  * **Node.js**
-  * **Express.js**
-  * **Prisma** como ORM
-  * **PostgreSQL** como banco de dados
-  * **Docker** e **Docker Compose** para gerenciamento do contêiner do banco de dados
+### Backend
+- Node.js
+- Express.js
+- Prisma ORM
+- Docker para containerização
+- PostgreSQL como banco de dados
 
 ## 📋 Pré-requisitos
 
-Antes de começar, você vai precisar ter as seguintes ferramentas instaladas em sua máquina:
+- Node.js (versão 14 ou superior)
+- Docker e Docker Compose
+- npm ou yarn
 
-  * [Git](https://git-scm.com)
-  * [Node.js](https://nodejs.org/en/)
-  * [Docker](https://www.docker.com/)
+## 🔧 Instalação e Configuração
 
-## ⚙️ Como Rodar o Backend
+### Clonando o Repositório
 
-Siga os passos abaixo para executar o backend da aplicação localmente:
+```bash
+git clone https://github.com/DarcMary/gerenciamento-usuarios-fullstack.git
+cd gerenciamento-usuarios-fullstack
+```
 
-1.  **Clone o repositório:**
+### Configurando o Backend
 
-    ```bash
-    git clone https://github.com/DarcMary/gerenciamento-usuarios-fullstack.git
-    ```
+1. Entre na pasta do backend:
+```bash
+cd backend
+```
 
-2.  **Acesse a pasta do projeto:**
+2. Instale as dependências:
+```bash
+npm install
+```
 
-    ```bash
-    cd gerenciamento-usuarios-fullstack
-    ```
+3. Configure as variáveis de ambiente:
+- Crie um arquivo `.env` baseado no `.env.example`
+- Configure as variáveis necessárias, especialmente a conexão com o banco de dados
 
-3.  **Instale as dependências:**
+4. Inicie o container do Docker:
+```bash
+docker-compose up -d
+```
 
-    ```bash
-    npm install
-    ```
+5. Execute as migrações do banco de dados:
+```bash
+npx prisma migrate dev
+```
 
-4.  **Configure as variáveis de ambiente:**
+6. Inicie o servidor:
+```bash
+npm run dev
+```
 
-      * Crie um arquivo chamado `.env` na raiz do projeto.
-      * Copie o conteúdo do arquivo `.env.example` (se houver) ou use o exemplo abaixo e cole no seu `.env`:
-        ```env
-        # URL de conexão para o banco de dados PostgreSQL no Docker
-        DATABASE_URL="postgresql://sammy:your_password@localhost:5432/my-blog?schema=public"
-        ```
+### Configurando o Frontend
 
-5.  **Inicie o banco de dados com Docker:**
+1. Em outro terminal, entre na pasta do frontend:
+```bash
+cd frontend
+```
 
-      * Certifique-se de que o Docker está em execução na sua máquina.
-      * Execute o comando abaixo para iniciar o contêiner do PostgreSQL:
-        ```bash
-        docker-compose up -d
-        ```
+2. Instale as dependências:
+```bash
+npm install
+```
 
-6.  **Execute as migrações do banco de dados:**
+3. Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+```
 
-      * Este comando irá criar as tabelas no seu banco de dados PostgreSQL.
-        ```bash
-        npx prisma migrate dev
-        ```
+## 🌟 Funcionalidades
 
-7.  **Inicie o servidor:**
+- ✅ Cadastro de usuários
+- ✅ Listagem de usuários
+- ✅ Atualização de dados
+- ✅ Remoção de usuários
+- ✅ Interface responsiva
+- ✅ Validação de dados
+- ✅ Feedback visual das operações
 
-    ```bash
-    npm run dev
-    ```
+## 🛠️ Estrutura do Projeto
 
-    O servidor estará rodando em `http://localhost:3000`.
+```
+gerenciamento-usuarios-fullstack/
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── routes/
+│   │   └── index.js
+│   ├── prisma/
+│   └── docker-compose.yml
+└── frontend/
+    ├── src/
+    │   ├── components/
+    │   ├── services/
+    │   └── App.jsx
+    └── public/
+```
 
-## 🔀 Rotas da API
+## 📦 API Endpoints
 
-| Método | Rota | Descrição |
-| :--- | :--- | :--- |
-| `POST` | `/usuarios` | Cria um novo usuário. |
-| `GET` | `/usuarios` | Lista todos os usuários cadastrados. |
-| `PUT` | `/usuarios/:id` | Atualiza um usuário existente pelo seu ID. |
-| `DELETE`| `/usuarios/:id` | Deleta um usuário existente pelo seu ID. |
+### Usuários
 
-## 👨‍💻 Autor
+- `GET /users` - Lista todos os usuários
+- `POST /users` - Cria um novo usuário
+- `PUT /users/:id` - Atualiza um usuário
+- `DELETE /users/:id` - Remove um usuário
 
-**Darc Mary**
+## 🤝 Contribuindo
 
-  * GitHub: [DarcMary](https://www.google.com/search?q=https://github.com/DarcMary)
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Faça commit das suas alterações (`git commit -m 'Add some AmazingFeature'`)
+4. Faça push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## ✨ Autor
+
+Feito por [DarcMary](https://github.com/DarcMary)
+
+---
+
+⌨️ com ❤️ por [DarcMary](https://github.com/DarcMary)
