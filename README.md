@@ -135,5 +135,3 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 Feito por [DarcMary](https://github.com/DarcMary)
 
 ---
-
-⌨️ com ❤️ por [DarcMary](https://github.com/DarcMary)
