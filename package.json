@@ -1,22 +1,22 @@
 {
-  "name": "gerenciamento-usuarios-fullstack",
+  "name": "projeto-geral",
+  "private": true,
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "dev": "nodemon src/index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@prisma/client": "^6.12.0",
-    "express": "^5.1.0"
+    "dev": "npm run dev --workspace=frontend & npm run dev --workspace=backend",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "lint": "npm run lint --workspaces --if-present",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "nodemon": "^3.1.10",
-    "prisma": "^6.12.0"
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.0.0",
+    "postcss": "^8.5.6",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^4.1.11"
   }
 }

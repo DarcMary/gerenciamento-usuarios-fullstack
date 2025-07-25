@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-neutral-950 text-neutral-300 antialiased;
+}
+
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
