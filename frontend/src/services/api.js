@@ -1,5 +1,5 @@
 const BASE_URL = import.meta.env.PROD 
-  ? 'https://gerenciamento-usuarios-fullstack.vercel.app'
+  ? 'https://gerenciamento-usuarios-fullstack.onrender.com'
   : 'http://localhost:3000';
 
 const handleResponse = async (response) => {
