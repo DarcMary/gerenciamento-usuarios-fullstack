@@ -2,24 +2,36 @@
 
 Uma aplicação web completa para gerenciamento de usuários, construída com React no frontend e Node.js no backend.
 
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://gerenciamento-usuarios-fullstack.vercel.app/)
+![React](https://img.shields.io/badge/React-18.2.0-blue?style=for-the-badge&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-20.x-green?style=for-the-badge&logo=node.js)
+![Prisma](https://img.shields.io/badge/Prisma-6.x-cyan?style=for-the-badge&logo=prisma)
+
+## 🌐 Demo
+
+Acesse a aplicação em produção: [UserFlow App](https://gerenciamento-usuarios-fullstack.vercel.app/)
+
 ## 🚀 Tecnologias Utilizadas
 
 ### Frontend
 - React com Vite
 - TailwindCSS para estilização
-- Axios para requisições HTTP
+- React Icons para ícones
+- React Toastify para notificações
+- Framer Motion para animações
 - ESLint para padronização de código
 
 ### Backend
 - Node.js
 - Express.js
 - Prisma ORM
+- PostgreSQL
 - Docker para containerização
-- PostgreSQL como banco de dados
+- Cors para segurança
 
 ## 📋 Pré-requisitos
 
-- Node.js (versão 14 ou superior)
+- Node.js (versão 20 ou superior)
 - Docker e Docker Compose
 - npm ou yarn
 
@@ -82,13 +94,23 @@ npm run dev
 
 ## 🌟 Funcionalidades
 
-- ✅ Cadastro de usuários
-- ✅ Listagem de usuários
-- ✅ Atualização de dados
-- ✅ Remoção de usuários
-- ✅ Interface responsiva
-- ✅ Validação de dados
+### Gestão de Usuários
+- ✅ Cadastro com validações em tempo real
+- ✅ Listagem com cards modernos
+- ✅ Atualização de dados com feedback
+- ✅ Remoção com confirmação
+- ✅ Interface responsiva e animada
+- ✅ Validações frontend e backend
 - ✅ Feedback visual das operações
+- ✅ Tratamento de erros amigável
+
+## 🎯 Próximos Passos
+
+- [ ] Implementação de autenticação
+- [ ] Adição de foto de perfil
+- [ ] Histórico de alterações
+- [ ] Testes automatizados
+- [ ] Internacionalização
 
 ## 🛠️ Estrutura do Projeto
 
@@ -118,6 +140,14 @@ gerenciamento-usuarios-fullstack/
 - `PUT /users/:id` - Atualiza um usuário
 - `DELETE /users/:id` - Remove um usuário
 
+## 🚀 Deploy
+
+A aplicação está hospedada na Vercel com as seguintes configurações:
+
+- Frontend: Deploy automático da branch main
+- Backend: Serverless Functions
+- Banco de dados: PostgreSQL na nuvem
+
 ## 🤝 Contribuindo
 
 1. Faça um fork do projeto
@@ -132,6 +162,6 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## ✨ Autor
 
-Feito por [DarcMary](https://github.com/DarcMary)
+Desenvolvido por [DarcMary](https://github.com/DarcMary)
 
 ---
