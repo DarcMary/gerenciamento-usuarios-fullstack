@@ -1,11 +1,8 @@
 import express from 'express';
-import Prisma from '@prisma/client';
 import userRoutes from './routes/user.routes.js'; 
 import cors from 'cors';
 
-const { PrismaClient } = Prisma;
-const app = express();
-const prisma = new PrismaClient();
+const app = express
 
 if (process.env.NODE_ENV === 'production') {
   app.use(cors({
