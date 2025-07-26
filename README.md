@@ -3,7 +3,7 @@
 Uma aplicação web completa para gerenciamento de usuários, construída com React no frontend e Node.js no backend.
 
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://gerenciamento-usuarios-fullstack.vercel.app/)
-![React](https://img.shields.io/badge/React-18.2.0-blue?style=for-the-badge&logo=react)
+![React](https://img.shields.io/badge/React-19.1.0-blue?style=for-the-badge&logo=react)
 ![Node.js](https://img.shields.io/badge/Node.js-20.x-green?style=for-the-badge&logo=node.js)
 ![Prisma](https://img.shields.io/badge/Prisma-6.x-cyan?style=for-the-badge&logo=prisma)
 
