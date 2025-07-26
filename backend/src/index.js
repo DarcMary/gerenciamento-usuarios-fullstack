@@ -7,7 +7,14 @@ const { PrismaClient } = Prisma;
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(cors());
+if (process.env.NODE_ENV === 'production') {
+  app.use(cors({
+    origin: 'https://gerenciamento-usuarios-fullstack.vercel.app',
+    optionsSuccessStatus: 200
+  }));
+} else {
+  app.use(cors()); 
+}
 app.use(express.json());
 
 app.use('/users', userRoutes); 
